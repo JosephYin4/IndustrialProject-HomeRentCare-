@@ -1,0 +1,86 @@
+{{#extends "base"}}
+
+{{#block "title"}}Edit Payment{{/block}}
+
+{{#block "content"}}
+<h1>Edit Payment Details</h1>
+<form method="POST">
+   <!--<div class="mb-3">
+        <label>User ID</label>
+        <select name="userID" class="form-control">
+            {{#each userdetail1}}
+            <option value="{{userID}}" 
+                {{#eq userID  ../userId.userID}} selected {{/eq}}
+             >{{name}}</option>
+            {{/each}}
+        </select>
+    </div> -->
+    <div class="mb-3">
+        <label>Type of Payment</label>
+        <input type="text" 
+               class="form-control" 
+               name="typeofPayment"
+               value="{{payment1.typeofPayment}}"/>
+    </div>
+    <div class="mb-3">
+        <label>Date Paid</label>
+        <input type="date" 
+               class="form-control" 
+               name="datePaid"
+               value="{{payment1.datePaid}}"
+               />
+    </div>
+        <div class="mb-3">
+        <label>Amount Paid</label>
+        <input type="number" 
+               class="form-control" 
+               name="amountPaid"
+               value="{{payment1.amountPaid}}"
+               />
+    </div>
+    <div class="mb-3">
+        <label>Receiver Name</label>
+        <input type="text" 
+               class="form-control" 
+               name="receiverName"
+               value="{{payment1.receiverName}}"
+               />
+    </div>
+        <div class="mb-3">
+        <label>Payment Invoice Number</label>
+        <input type="text" 
+               class="form-control" 
+               name="paymentInvoiceNumber"
+               value="{{payment1.paymentInvoiceNumber}}"
+               />
+    </div>
+    <div class="mb-3">
+        <label>Remarks</label>
+        <input type="text" 
+               class="form-control" 
+               name="remarks"
+               value="{{payment1.remarks}}"
+               />
+    </div>
+    <div class="mb-3">
+        <label>Payer UserID</label>
+        <input type="number" 
+               class="form-control" 
+               name="userID"
+               value="{{payment1.userID}}"
+               />
+    </div>
+    <div class="mb-3">
+        <label>Tenancy ID</label>
+        <input type="number" 
+               class="form-control" 
+               name="tenancyID"
+               value="{{payment1.tenancyID}}"
+               />
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+</form>
+{{/block}}
+
+{{/extends}}

@@ -1,0 +1,49 @@
+{{#extends "base"}}
+
+{{#block "title"}}Create New Tenancy{{/block}}
+
+{{#block "content"}}
+
+<h1>Add a New Tenancy</h1>
+<form method="POST">
+ <!--   <div class="mb-3">
+        <label>Type of User</label>
+        <select name="userID" class="form-control">
+            {{#each userdetail}}
+            <option value="{{userID}}">{{typeofUser}}</option>
+            {{/each}}
+        </select>
+    </div> -->
+    <div class="mb-3">
+        <label>Date Started</label>
+        <input type="date" class="form-control" name="dateStarted">
+    </div>
+    <div class="mb-3">
+        <label>Duration of Tenancy in Months</label>
+        <input type="number" class="form-control" name="durationofTenancy">
+    </div>
+    <div class="mb-3">
+        <label>Base Rental Amount in RM</label>
+        <input type="number" class="form-control" name="baserentalAmount">
+    </div>
+    <div class="mb-3">
+        <label>Deposit Amount</label>
+        <input type="number" class="form-control" name="depositAmount">
+    </div>
+        <div class="mb-3">
+        <label>Subtenants FullNames</label>
+        <input type="text" class="form-control" name="subtenantsFullName">
+    </div>
+    <div class="mb-3">
+        <label>Property ID</label>
+        <input type="number" class="form-control" name="propertyID">
+    </div>
+    <div class="mb-3">
+        <label>User ID</label>
+        <input type="number" class="form-control" name="userID">
+    </div>
+    <button class="btn btn-primary">Submit</button>
+
+</form>
+{{/block}}
+{{/extends}}

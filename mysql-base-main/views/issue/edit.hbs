@@ -1,0 +1,94 @@
+{{#extends "base"}}
+
+{{#block "title"}}Edit Issue{{/block}}
+
+{{#block "content"}}
+<h1>Edit Issue Details</h1>
+<form method="POST">
+   <!--<div class="mb-3">
+        <label>User ID</label>
+        <select name="userID" class="form-control">
+            {{#each userdetail1}}
+            <option value="{{userID}}" 
+                {{#eq userID  ../userId.userID}} selected {{/eq}}
+             >{{name}}</option>
+            {{/each}}
+        </select>
+    </div> -->
+    <div class="mb-3">
+        <label>Type of Issue</label>
+        <input type="text" 
+               class="form-control" 
+               name="typeofIssue"
+               value="{{issue1.typeofIssue}}"/>
+    </div>
+    <div class="mb-3">
+        <label>Location of Issue</label>
+        <input type="text" 
+               class="form-control" 
+               name="locationofIssue"
+               value="{{issue1.locationofIssue}}"
+               />
+    </div>
+    <div class="mb-3">
+        <label>Issue Description Details</label>
+        <input type="text" 
+               class="form-control" 
+               name="issuedescriptionDetails"
+               value="{{issue1.issuedescriptionDetails}}"
+               />
+    </div>
+        <div class="mb-3">
+        <label>Date Open</label>
+        <input type="date" 
+               class="form-control" 
+               name="dateOpen"
+               value="{{payment1.dateOpen}}"
+               />
+    </div>
+    <div class="mb-3">
+        <label>Date Closed</label>
+        <input type="date" 
+               class="form-control" 
+               name="dateClosed"
+               value="{{payment1.dateClosed}}"
+               />
+    </div>
+    <div class="mb-3">
+        <label>Issue Status Remarks</label>
+        <input type="text" 
+               class="form-control" 
+               name="issuestatusRemarks"
+               value="{{issue1.issuestatusRemarks}}"
+               />
+    </div>
+    <div class="mb-3">
+        <label>Issue Current Status</label>
+        <input type="text" 
+               class="form-control" 
+               name="issuecurrentStatus"
+               value="{{payment1.issuecurrentStatus}}"
+               />
+    </div>
+        <div class="mb-3">
+        <label>Issue Submitted By UserID</label>
+        <input type="number" 
+               class="form-control" 
+               name="issueSubmittedByID"
+               value="{{payment1.issueSubmittedByID}}"
+               />
+    </div>
+        <div class="mb-3">
+        <label>Issue Resolved By UserID</label>
+        <input type="number" 
+               class="form-control" 
+               name="issueResolvedByID"
+               value="{{payment1.issueResolvedByID}}"
+               />
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+</form>
+{{/block}}
+
+{{/extends}}
